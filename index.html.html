@@ -1066,6 +1066,30 @@ footer b{color:#A9B7C6;font-weight:500}
   .spec th,.spec td{padding-top:11px;padding-bottom:11px}
   .spec td{padding-left:10px}
 }
+
+/* 헤더 — 좁은 화면에서 브랜드·전화번호가 넘치지 않도록 */
+@media(max-width:640px){
+  .topbar,.topbar.solid{padding:13px 16px;gap:10px}
+  .brand{min-width:0;flex:1 1 auto;gap:9px}
+  .brand .mark-logo{width:26px!important;flex:none}
+  .brand b{
+    font-size:12px;letter-spacing:-.01em;
+    white-space:normal;overflow:hidden;text-overflow:ellipsis;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    word-break:keep-all;line-height:1.25;
+  }
+  .brand em{font-size:7px;letter-spacing:.16em;margin-top:3px;
+    white-space:normal;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+  .top-tel{flex:0 0 auto;min-width:0;padding:8px 11px;font-size:11.5px;gap:6px;letter-spacing:.02em}
+  .top-tel svg{width:10px;height:10px;flex:none}
+  .top-tel span{white-space:nowrap}
+}
+@media(max-width:400px){
+  .topbar,.topbar.solid{padding:12px 12px;gap:8px}
+  .brand b{font-size:11px}
+  .brand em{font-size:6.5px;letter-spacing:.1em}
+  .top-tel{font-size:10.5px;padding:7px 9px;gap:5px}
+}
 </style>
 <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
 <meta name="ext-resource-dependency" content="lite/assets/eagle-fly.webp" data-resource-id="eagleFly">
