@@ -1047,6 +1047,25 @@ footer b{color:#A9B7C6;font-weight:500}
 .ev-pill.live{border-color:#4FC3F7;background:rgba(20,70,100,.9);color:#fff}
 .ev-pill.live .ev-dot{background:#8FE6FF;animation-duration:.9s}
 .ev-pill.live .ev-time{color:#BFEAFF;font-weight:600}
+
+/* 사업개요 — 모바일 1컬럼 */
+@media(max-width:900px){
+  .overview{grid-template-columns:1fr;gap:30px;margin-top:40px}
+  .ov-figure img{aspect-ratio:16/10}
+  .ov-figure figcaption{font-size:10px;flex-wrap:wrap}
+  .spec{font-size:13px}
+  .spec th{width:88px}
+  .spec td{padding-left:12px}
+  .spec td .u{display:block;margin:3px 0 0;font-size:11px}
+  .spec tr:hover td{padding-left:12px}
+}
+@media(max-width:560px){
+  .overview{gap:24px}
+  .spec{font-size:12.5px}
+  .spec th{width:74px;font-size:10.5px;letter-spacing:.06em}
+  .spec th,.spec td{padding-top:11px;padding-bottom:11px}
+  .spec td{padding-left:10px}
+}
 </style>
 <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
 <meta name="ext-resource-dependency" content="lite/assets/eagle-fly.webp" data-resource-id="eagleFly">
